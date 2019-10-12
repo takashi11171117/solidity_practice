@@ -23,4 +23,9 @@ describe('Hello', () => {
     const message = await hello.methods.message().call();
     assert.equal(message, 'Hello world!');
   });
+  it('can change the message', async () => {
+    await hello.methods.setMessage('bye').send({ from: accounts[0] });
+    const message = await hello.methods.message().call();
+    assert.equal(message, 'bye');
+  });
 })
