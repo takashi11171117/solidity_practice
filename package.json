@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --recursive"
   },
   "dependencies": {
     "dotenv": "^8.1.0",
